@@ -39,7 +39,7 @@ Version Identifier:    %h%n%n\
         var headerText = execSync.exec(gitCommand + ' ' + file.path).stdout;
         headerText = headerText || '';
         var data = {
-            date : moment().utc().format(),
+            date : moment().format('YYYY-MM-DD HH:mm:ss ZZ'),
             file : file
         };
         file.contents = Buffer.concat([
