@@ -10,7 +10,7 @@
 // -----------------------------------------------------------------------------
 
 var es       = require('event-stream');
-var execSync = require('execSync');
+var exec     = require('sync-exec');
 var gutil    = require('gulp-util');
 var moment   = require('moment');
 
@@ -34,7 +34,7 @@ module.exports = function() {
                         headerFormat +'\'';
 
     return es.map(function(file, cb){
-        var headerText = execSync.exec(gitCommand + ' ' + file.path).stdout;
+        var headerText = exec(gitCommand + ' ' + file.path).stdout;
         headerText = headerText || '';
         var data = {
             date : moment().utc().format(),
