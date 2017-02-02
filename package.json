@@ -1,6 +1,6 @@
 {
   "name": "gulp-header-git",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "gulp plugin for adding headers containing information from git.",
   "main": "index.js",
   "scripts": {
