@@ -26,7 +26,6 @@ module.exports = function() {
 ---------------------  --------------------------------------------%n\
 Last Modified On:      %ci%n%n\
 Last Modified By:      %cn%n%n\
-Generated On:          <%%= date %%>%n%n\
 Generated From:        <%%= file.relative %%>%n%n\
 Version Identifier:    %h%n%n\
 --------------------------------------------------------------------%n\
@@ -39,7 +38,6 @@ Version Identifier:    %h%n%n\
         var headerText = exec(gitCommand + ' ' + file.path).stdout;
         headerText = headerText || '';
         var data = {
-            date : moment().format('YYYY-MM-DD HH:mm:ss ZZ'),
             file : file
         };
         file.contents = Buffer.concat([
