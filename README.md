@@ -32,6 +32,32 @@ gulp.task('build', function() {
 });
 ```
 
+# API
+
+## header([options])
+
+### options
+
+**Type:** `Object`
+
+#### options.asFooter
+
+**Type:** `boolean`
+
+**Default:** `false`
+
+Set to `true` to place the Document Control table at the end of the document
+rather than at the beginning of the document.
+
+#### options.includeTag
+
+**Type:** `boolean`
+
+**Default:** `false`
+
+Set to `true` to include the output of `git describe --dirty` in the `Version
+Identifier` field.
+
 # Licenses
 
 Refer to the `LICENSE` file for details.
